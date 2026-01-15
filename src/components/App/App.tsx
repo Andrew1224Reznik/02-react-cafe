@@ -2,9 +2,9 @@ import { useState } from "react";
 import type { Votes, VoteType } from "../../types/votes";
 import css from "../App/App.module.css";
 import CafeInfo from "../CafeInfo/CafeInfo";
-import VoteOptions from "../VoteOptions/VoteOptions";
-import VoteStats from "../VoteStats/VoteStats";
-import NotificationComponent from "../Notification/Notification";
+import VoteOptions from "../VoteOptions/VoteOptions.tsx";
+import VoteStats from "../VoteStats/VoteStats.tsx";
+import Notification from "../Notification/Notification";
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -47,7 +47,7 @@ export default function App() {
           positiveRate={positiveRate}
         />
       ) : (
-        <NotificationComponent />
+        <Notification />
       )}
     </div>
   );
